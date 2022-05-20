@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS animatins</title>
+
+  <!-- STYLESHEET -->
+  <link rel="stylesheet" href="" type="text/css" id="css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .animation {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      display: none;
+    }
+
+    .loader {
+      display: flex;
+      position: absolute;
+      width: 100vw;
+      justify-content: center;
+      padding: 50px;
+      z-index: 10;
+    }
+
+    button {
+      margin-left: 5px;
+      background-color: blue;
+      color: white;
+      border: none;
+      width: 50px;
+      font-family: sans-serif;
+      font-size: large;
+      height: 30px;
+    }
+
+    select {
+      background-color: cornflowerblue;
+      border: aliceblue;
+      border-style: solid;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="loader">
+    <select name="css-file" id="css-file">
+      <option value="" selected>Select animation</option>
+      <option value="style1.css">first animatin</option>
+
+    </select>
+    <button onclick="cssloader()">Show</button>
+  </div>
+  <div class="animation">
+    <a href="#">Hover Me</a>
+  </div>
+
+  <script>
+    function cssloader() {
+      document.getElementById('css').setAttribute('href',
+        document.getElementById('css-file').value);
+
+    }
+  </script>
+</body>
+
+</html>
