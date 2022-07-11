@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CSS animatins</title>
+
+  <!-- STYLESHEET -->
+  <link rel="stylesheet" href="" type="text/css" id="css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      width: 100vw;
+      height: 100vh;
+      overflow: hidden;
+      font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    .page-wrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .loader {
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .loader__select {
+      font-size: 1rem;
+      margin: 1rem;
+      height: 2rem;
+      width: 10rem;
+      border: #828282 dashed 1px;
+      color: #333;
+      background-color: white;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .loader__button {
+      appearance: none;
+      border: 1px #aaa dotted;
+      background-color: white;
+      color: #222;
+      font-weight: 600;
+      padding: .5rem;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .loader__button:hover {
+      background-color: #222;
+      color: white;
+
+    }
+
+    .loader__button:active {
+      background-color: #eee;
+      color: #444;
+    }
+
+    .showcase {
+      width: 60vw;
+      height: 60vh;
+      margin: 2rem;
+      border: 2px dotted #828282;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    option {
+      background-color: #fff;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <div class="loader">
+      <select class="loader__select" name="css-file" id="animatinon">
+        <option value="" selected hidden>Select animation</option>
+        <option value="./button_hover_effect1/animation.html">first animatin</option>
+      </select>
+      <button onclick="animatinonLoader()" class="loader__button">Show</button>
+    </div>
+
+
+    <iframe class="showcase" id="animation-showcase" src="" title="my animation showcase">
+
+    </iframe>
+
+
+</body>
+
+<script>
+  function animatinonLoader() {
+    document.getElementById('animation-showcase').setAttribute('src',
+      document.getElementById('animatinon').value);
+  }
+</script>
+
+</html>
