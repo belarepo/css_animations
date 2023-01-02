@@ -43,7 +43,7 @@
       font-size: 1rem;
       margin: 1rem;
       height: 2rem;
-      width: 10rem;
+      width: 12rem;
       border: #828282 dashed 1px;
       color: #333;
       background-color: white;
@@ -89,7 +89,8 @@
     }
 
     option {
-      background-color: #fff;
+      color: #222;
+      background-color: #fefefe;
     }
   </style>
 
@@ -100,11 +101,12 @@
     <div class="loader">
       <select class="loader__select" name="css-file" id="animatinon">
         <option value="" selected hidden>Select animation</option>
-        <option value="./button_hover_effect1/animation.html">first animatin</option>
+        <option value="./button_hover_effect_1/animation.html">button hover effect 1</option>
+        <!-- <option value="ADDRESS_OF_ANIMATION">NAME_OF_ANIMATION</option> -->
+
       </select>
       <button onclick="animatinonLoader()" class="loader__button">Show</button>
     </div>
-
 
     <iframe class="showcase" id="animation-showcase" src="" title="my animation showcase">
 
@@ -115,8 +117,10 @@
 
 <script>
   function animatinonLoader() {
-    document.getElementById('animation-showcase').setAttribute('src',
-      document.getElementById('animatinon').value);
+    document.getElementById('animation-showcase')
+      .setAttribute(
+        'src', document.getElementById('animatinon').value
+      );
   }
 </script>
 
