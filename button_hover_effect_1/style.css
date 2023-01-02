@@ -1,0 +1,14 @@
+.btn {
+  padding: 20px 50px;
+  font-weight: 700;
+  border: none;
+  border-radius: 3px;
+  color: rgb(255, 255, 255);
+  transition-property: background-color;
+  transition-duration: 500ms;
+  background-color: orange;
+}
+
+.btn:hover {
+  background-color: orangered;
+}
