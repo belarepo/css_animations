@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .menu {
+            list-style-type: none;
+            display: flex;
+        }
+
+        .menu__item {
+            padding: .4rem 1.5rem;
+            margin: 0.2rem;
+        }
+
+        .menu__item a {
+            font-weight: 500;
+            font-family: Arial, Helvetica, sans-serif;
+            text-decoration: none;
+            text-transform: capitalize;
+            color: inherit;
+            position: relative;
+            z-index: 1;
+        }
+
+        @media screen and (max-width:700px) {
+            .menu {
+                flex-direction: column;
+            }
+
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <ul class="menu">
+            <li class="menu__item"><a href="">home</a>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </li>
+            <li class="menu__item"><a href="">about</a>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </li>
+            <li class="menu__item"><a href="">service</a>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </li>
+            <li class="menu__item"><a href="">team</a>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </li>
+            <li class="menu__item"><a href="">contact</a>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
