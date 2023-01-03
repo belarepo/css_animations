@@ -1,6 +1,7 @@
 :root {
-  --cl-pr: rgb(104, 104, 104);
-  --cl-se: rgb(255, 255, 255);
+  --cl-pr: rgb(255, 255, 255);
+  --cl-se-1: rgb(49, 49, 49);
+  --cl-se-2: rgb(218, 47, 47);
 }
 .btn {
   cursor: pointer;
@@ -10,29 +11,31 @@
   font-size: 1em;
   border: 0.2em solid var(--cl-pr);
   color: var(--cl-pr);
-  background-color: var(--cl-se);
+  background-color: var(--cl-se-1);
   position: relative;
   overflow: hidden;
   transition: all 500ms linear;
 }
 .btn::before {
-  content: 'OK!!!';
+  content: '';
   position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: var(--cl-pr);
-  color: var(--cl-se);
+  color: var(--cl-se-1);
   line-height: 100px;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  transition: all 500ms linear;
-  transform: translateY(-100%);
-  transform-origin: bottom left;
+  height: 2rem;
+  transition: all 200ms linear;
+  transform: translateX(-100%) rotate(45deg);
 }
 .btn:hover::before {
-  transform: translateY(0);
+  transform: translateX(100%) rotate(45deg);
+}
+.btn:hover {
+  background-color: var(--cl-se-2);
 }
