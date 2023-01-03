@@ -1,14 +1,16 @@
 .btn {
+  cursor: pointer;
   padding: 20px 50px;
   font-weight: 700;
+  font-size: 1em;
   border: none;
   border-radius: 3px;
   color: rgb(255, 255, 255);
-  transition-property: background-color;
-  transition-duration: 500ms;
+  transition: all 500ms;
   background-color: orange;
 }
 
 .btn:hover {
   background-color: orangered;
+  transform: scale(1.02);
 }
