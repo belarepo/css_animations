@@ -12,6 +12,7 @@
 }
 .btn::after {
   content: '';
+  display: block;
   position: absolute;
   background-color: rgb(255, 225, 58);
   top: 0;
